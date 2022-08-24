@@ -1,0 +1,5 @@
+<launch>
+<rosparam file="$(find GoTo_pkg)/config/config.yaml" />
+<node name="first" pkg="GoTo_pkg" type="GoTo.py" output="screen"/>
+<node name= "second" pkg="GoTo_pkg" type="GoTo.py" output="screen"/>
+</launch>
