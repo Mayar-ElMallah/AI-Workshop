@@ -1,0 +1,2 @@
+goTo_pkg
+-DCATKIN_DEVEL_PREFIX=/home/mayar/GoTo/devel -DCMAKE_INSTALL_PREFIX=/home/mayar/GoTo/install -G Unix Makefiles
