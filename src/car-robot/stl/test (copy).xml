@@ -1,0 +1,28 @@
+<robot name="carobot">
+<link name ="world"/>
+	<link name ='car1'>
+    	<visual>
+			<geometry>
+				<mesh filename="package://car-robot/stl/full-truck-v3.stl"/>
+				<origin xyz="40 40 40"/>
+			</geometry>
+		</visual>
+ 	</link>
+ 	<link name ='car2'>
+    	<visual>
+			<geometry>
+				<mesh filename="package://car-robot/stl/full-truck-v3.stl"/>
+				<origin xyz="0 0 0"/>
+			</geometry>
+		</visual>
+ 	</link>
+ 	<joint name="joint1" type="planar">
+ 		<parent link="world"/>
+ 		<child link="car1"/>
+ 	</joint>
+ 	
+ 	<joint name="joint2" type="planar">
+ 		<parent link="world"/>
+ 		<child link="car2"/>
+ 	</joint>
+</robot>

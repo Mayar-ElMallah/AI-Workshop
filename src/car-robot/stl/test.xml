@@ -1,0 +1,51 @@
+<robot name="carobot">
+<link name ="world"/>
+	<link name ='car1'>
+    	<visual>
+			<geometry>
+				<mesh filename="package://car-robot/stl/full-truck-v3.stl" scale="0.006 0.006 0.006"/>
+				
+			</geometry>
+		
+		</visual>
+ 	</link>
+ 	
+ 	<link name ='car2'>
+    	<visual>
+			<geometry>
+				<mesh filename="package://car-robot/stl/full-truck-v3.stl" scale="0.006 0.006 0.006"/>
+				
+			</geometry>
+
+		</visual>
+ 	</link>
+ 	
+ 	<link name ='car3'>
+    	<visual>
+			<geometry>
+				<mesh filename="package://car-robot/stl/full-truck-v3.stl" scale="0.006 0.006 0.006"/>
+				
+			</geometry>
+
+		</visual>
+ 	</link>
+ 	<joint name="joint1" type="prismatic">
+ 		<parent link="world"/>
+ 		<child link="car1"/>
+ 		<limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+               <origin rpy="0 0 0" xyz="0 0.72 0"/>
+ 	</joint>
+ 	
+ 	<joint name="joint2" type="prismatic">
+ 		<parent link="world"/>
+ 		<child link="car2"/>
+ 		<limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+               <origin rpy="0 0 0" xyz="0 0 0"/>
+ 	</joint>
+ 	<joint name="joint3" type="prismatic">
+ 		<parent link="world"/>
+ 		<child link="car3"/>
+ 		<limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+               <origin rpy="0 0 0" xyz="0 -0.72 0"/>
+ 	</joint>
+</robot>

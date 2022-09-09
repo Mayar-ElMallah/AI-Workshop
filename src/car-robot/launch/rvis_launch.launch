@@ -1,0 +1,11 @@
+<launch>
+  <param name="robot_description" textfile="$(find car-robot)/stl/test.xml"/>
+  <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+  
+  <node name="turtle_tf_broadcaster" pkg="car-robot" type="$(find car-robot)/src/robot.py"/>
+  <node name="Bicycle_Model_Simulator" pkg="car-robot" type="$(find car-robot)/src/Truck.py"/>
+  
+</launch>
